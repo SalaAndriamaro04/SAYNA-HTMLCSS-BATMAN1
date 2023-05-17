@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "rajdhani";
+    src: url(../police/Rajdhani-Medium.ttf);
+}
+@font-face{
+    font-family: "Space Grotesk";
+    src: url(../police/SpaceGrotesk-Regular.ttf);
+}
+:root{
+    --yellow-color: #FFFF00;
+    --yellow-light: #F8F184;
+    --blue-dark: #19587D;
+    --red-color: #B11313;
+    --black-little: #0D0E09;
+    --gradient-white: #eddebf52;
+    --gradient-red: #89000988;
+    --grey-color: #C4C4C4;
+    --dark-color: #000000;
+    --white-color: #FFFFFF;
+
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: "rajdhani";
+    font-size: 36px;
+    font-weight: 400;
+}
+button{
+    font-family: "rajdhani";
+    font-size: 20px;
+    font-weight: 400;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: "Space Grotesk";
+    font-weight: 300;
+}
+/*Design de la navigation*/
+nav{
+    display: flex;
+    align-items: center; /*hauteur centré pour les contenus*/
+    justify-content: space-between;
+    padding: 40px;
+}
+ul{
+    list-style: none;
+}
+nav ul a{
+    color: var(--white-color);
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "rajdhani";
+}
+nav ul a:hover{
+    color: var(--yellow-color);
+}
+
+.scroll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 80px;
+    top: 240px;
+}
+.scroll .social{
+    margin-top: 10px;
+}
+/*design de la section intro*/
+#hero{
+    background-image: url(../assets/Illustrations/Bathome1.png);
+    height: 800px;
+    background-position: top center;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover; /*adapte a n'importe quel type d'appareil*/
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 150px;
+
+}
+#hero .titre{
+    margin: 20px 0;
+}
+.btn{
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 20px;
+    padding: 20px 60px;
+    margin: 20px;
+    background: linear-gradient(
+        80deg,var(--gradient-white),var(--gradient-red)
+    );
+    box-shadow: var(--dark-color) 3px 3px 40px;
+}
+.cta{
+    margin-top:40px;
+}
+#hero .fleche{
+        background-color: #000000;
+        display: block;
+        margin: 50%;
+        margin-top: 550px;
+}
+
+/*design de la section batman au cinema*/
+#batman-cinema{
+    margin-top: 200px;
+}
+#batman-cinema .titre{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px 0;
+}
+#nemesis{
+    margin-top: 30px;
+}
+#nemesis .titre{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px 0;
+}
+.description{
+    margin-bottom: 40px;
+    text-align: justify;
+    width: 80%;
+    font-size: 15px;
+}
+.description-jl{
+    margin-bottom: 40px;
+    text-align: justify;
+    width: 90%;
+    font-size: 15px;
+}
+.personnage-info{
+    text-align: center;
+    padding: 10px;
+}
+
+.personnage{
+    display: flex;
+    justify-content: space-between;
+}
+.adversaire{
+    display: flex;
+    justify-content: space-between;
+}
+.compagnon{
+    display: flex;
+    justify-content: space-between;
+}
