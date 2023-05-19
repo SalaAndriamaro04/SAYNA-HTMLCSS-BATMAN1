@@ -29,7 +29,8 @@
             <img src="./assets/Logos/logo_bat_flèche_2.png">
         </div>
     </div>
-        <!-- la premiere section de la partie haut--> 
+
+                                <!-- section de la partie haut--> 
     <section id="hero">
         <div class="container">
             <div class="content">
@@ -50,12 +51,13 @@
             <img src="./assets/Logos/flèche_down_header.png">
         </div>
     </section>
-<!-- la deuxieme section concernant batman au cinema-->
+
+                                    <!--section batman au cinema-->
     <section id="batman-cinema">
         <div class="container">
-            <h2 class="titre">
+            <h1 class="titre">
                 BATMAN AU CINEMA
-            </h2>
+            </h1>
             <p class="description">
                 Le personnage de Batman est un super héros de l'univers de DC Comics. Il a été créé par le
                 dessinateur Bob Kane et le scénariste Bill Finger et apparaît pour la première fois dans le
@@ -89,7 +91,7 @@
             </div>
         </div>
     </section>
-<!-- Troisieme section concernant nemesis-->
+                                    <!--section nemesis-->
     <section id="nemesis">
         <div class="container">
             <h2 class="titre">
@@ -128,7 +130,8 @@
             </div>
         </div>    
     </section>
-<!--Quatrieme section concernant allies-->
+
+                                    <!--section allies-->
     <section id="allies">
         <div class="container">
             <h2 class="titre">
@@ -167,7 +170,8 @@
             </div>
         </div>
     </section>
-<!-- Cinquieme section concernant justice league-->
+
+                                        <!-- section justice league-->
     <section id="justice-league">
         <div class="container">
             <div>
@@ -188,33 +192,31 @@
         </div>
     </section>
 
-<!-- section multimedia-->
+                                    <!-- section multimedia-->
     <section id="multimedia">
         <div class="container">
-            <h2>
-            MULTIMeDIA
+            <h2 class="titre-debut">
+            MULTIMéDIA
             </h2>
             <button class="left-arrow">
                 <img src="./assets/Logos/icon_flèche_1.png">
             </button>
-            <button class="right">
+            <button class="right-arrow">
                 <img src="./assets/Logos/icon_flèche_2.png">
             </button>
             <div class="slider-multimedia">
-                <div class="slider-image">
-                    <img src="./assets/Illustrations/Bathome_ba1.png">
-                </div>
+                <img src="./assets/Illustrations/Bathome_ba1.png">
                 <div class="slider-content">
-                    <h2>
+                    <h2 class="titre">
                         ACTION, ADVENTURE
                     </h2>
-                    <h3>
+                    <h3 class="sous-titre">
                         Batman Begins
                     </h3>
-                    <p>
-                        IMDB: <span>8.2</span> 
+                    <p class="indice">
+                        IMDB: <span class="number-coloration">8.2</span> 
                     </p>
-                    <p>
+                    <p class="synopsis">
                         Le jeune Bruce Wayne assiste impuissant au meurtre de ses parents. Profondément
                         traumatisé, il grandit obnubilé par un désir de vengeance. La Ligue des ombres, une secte de
                         guerriers ninja dirigée par Ra's al Ghul, se chargera de son entraînement. De retour chez lui à
@@ -228,80 +230,95 @@
             </div>
         </div>
     </section>
-<!-- section concernant Contact-->
-    <section>
-        <div class="contact-form">
+
+                                    <!-- section formulaire-->
+    <section id="contact">
+        <div class="form">
             <h2>
                 PRENONS CONTACT
             </h2>
-            <label for="email"> ADRESSE EMAIL </label>
-            <br><input type="text" name="email" placeholder="Adresse email">
-            <br><label for="newletter"> NEWSLETTER </label>
-            <br><label for="">En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de
+            <label class="titre" for="email"> ADRESSE EMAIL </label>
+            <input type="email" name="email" placeholder="Adresse email">
+            <label class="titre" for="newsletter"> NEWSLETTER </label>
+            <label class="comms" for="other-information">En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de
                 Batman :</label>    
-            <br><input type="checkbox">
-            <div>
-                <span> Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter </span>
-                <span>
-                    <img src="./assets/Logos/icon_flèche_2.png" alt="">
+            <input class="checkbox" type="checkbox">
+            <div class="frequence">
+                <select name="drop-down-list" id="selection">
+                    <option value="0" disabled selected> Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter </option>
+                    <option value="1"> Une fois par semaine </option>
+                    <option value="2"> Une fois toutes les deux semaines (2 fois par mois) </option>
+                    <option value="3"> Une fois par mois </option>
+                    <option value="4"> Une fois tous les trois mois </option>
+                    <option value="5"> Une fois tous les six mois </option>                
+                </select>
+                <span class="icon">
+                    <img src="./assets/Logos/icon_flèche_2.png">
                 </span>
-            </div>
+            </div>           
             <div>
-                <p> Souhaitez-vous recevoir des news </p>
+                <p class="news"> Souhaitez-vous recevoir des news </p>
             </div>
-            <a href=""> Des films </a>
-            <a href=""> Des comics </a>
-            <a href=""> De tout </a>
-            <p>MESSAGE</p>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Laissez un commentaire pour la communauté"></textarea>
+            <div class="btn-group">
+                <input type="radio" id="film">
+                <label for="films"> Des films </label>
+                <input type="radio" id="comics">
+                <label for="comics"> Des comics </label>
+                <input type="radio" id="tout">
+                <label for="tout"> De tout </label>
+            </div>
+            <p class="titre">MESSAGE</p>
+            <textarea name="" id="" cols="20" rows="2" placeholder="Laissez un commentaire pour la communauté"></textarea>
             <input type="submit" value="CONFIRMER">
         </div>
     </section>
 </main>
-    <!-- section citation-->
-    <section>
-        <div>
-            <div>
+
+                                        <!-- section citation-->
+    <section id="citation">
+        <div class="container">
+            <div class="guillemet-open">
                 <img src="./assets/Logos/icon_guillemets_1.png">
             </div>
-            <div>
-                <p>
+            <div class="citation-item">
+                <p class="citation-text">
                     « La seule façon raisonnable de vivre en ce bas monde, 
-                    <br>c'est en dehors des règles. »
+                    c'est en dehors des règles. »
                 </p>
-                <p>
+                <p class="citation-auteur">
                     The Dark Knight : Le Chevalier Noir - 
-                    <br>Le Joker à Batman (2008)
+                    Le Joker à Batman (2008)
                 </p>
         <!-- chargement -->
             </div>
-            <div>
+            <div class="guillemet-close">
                 <img src="./assets/Logos/icon_guillemets_2.png">
             </div>
         </div>
     </section>
+<div class="clear-fix"> </div>
 <footer>
-    <div>    
-        <div>
+    <div class="container">    
+        <div class="text-footer">
             <img src="./assets/Logos/icon_WB.png">
-            <p>
+            <span>
                 Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan &
                 Snyder & Reeves
-            </p>
+            </span>
         </div>
-        <div>
-            <a href="">
+        <div class="social-footer">
+            <a href="" class="social-item">
                 <img src="./assets/Logos/logo_sayna_white.png">
-                <img src="/assets/Logos/icon_x.png">
+                <img src="./assets/Logos/icon_x.png">
                 <img src="./assets/Logos/icon_DC.png">
             </a>
-            <a href="">
+            <a href="" class="social-item">
                 <img src="./assets/Logos/icon_facebook.png">
             </a>
-            <a href="">
+            <a href="" class="social-item">
                 <img src="./assets/Logos/icon_ig.png">
             </a>
-            <a href="">
+            <a href="" class="social-item">
                 <img src="./assets/Logos/icon_tw.png">
             </a>  
         </div>

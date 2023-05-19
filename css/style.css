@@ -2,7 +2,7 @@
 /*--------------------------------CSS STYLE PROJECT BATMAN------------------------------------*/
 /*----------------------------------------§§--------------------------------------------------*/
 
-/*police a utilise*/
+/*police a utiliser*/
 @font-face {
     font-family: "rajdhani";
     src: url(../police/Rajdhani-Medium.ttf);
@@ -16,11 +16,11 @@
 :root{
     --yellow-color: #FFFF00;
     --yellow-light: #F8F184;
-    --blue-dark: #19587D;
+    --blue-dark: #19587D; /*rgb(25,88,125)*/
     --red-color: #B11313;
     --black-little: #0D0E09;
-    --gradient-white: #eddebf52;
-    --gradient-red: #89000988;
+    --gradient-white: #eddebf; /*rgb(237,222,191)*/
+    --gradient-red: #890008; /*rgb(137,0,8)*/
     --grey-color: #C4C4C4;
     --dark-color: #000000;
     --white-color: #FFFFFF;
@@ -115,7 +115,7 @@ nav ul a:hover{
     padding: 20px 60px;
     margin: 20px;
     background: linear-gradient(
-        80deg,var(--gradient-white),var(--gradient-red)
+        to right , rgba(237,222,191,0.3) 60%, rgba(130,0,8,0.1)
     );
     box-shadow: var(--dark-color) 3px 3px 40px;
 }
@@ -137,21 +137,32 @@ nav ul a:hover{
     text-transform: uppercase;
     font-weight: bold;
     margin: 30px 0;
+    font-family: "rajdhani";
+    font-size: 36px;
 }
 
 /*description de chaque titre*/
 .description{
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     text-align: justify;
     width: 80%;
     font-size: 18px;
+    font-family: "space grotesk";
 }
 
 /*personnage de batman au cinema*/
-.personnage{
+#batman-cinema .personnage{
     display: flex;
     justify-content: space-between;
 }
+
+/*information en bas de personnage, nemesis, allies*/
+.personnage-info{
+    text-align: center;
+    padding: 10px;
+    font-family: "space grotesk";
+}
+
 
                                 /*design de la section nemesis*/
 #nemesis{
@@ -162,6 +173,7 @@ nav ul a:hover{
     font-weight: bold;
     margin-top: 80px;
     margin-bottom: 30px;
+    font-family: "space grotesk";
 }
 #nemesis .nemesis-image{
     margin-left: -50px;
@@ -180,16 +192,11 @@ nav ul a:hover{
     font-weight: bold;
     margin-top: 100px;
     margin-bottom: 30px;
+    font-family: "space grotesk";
 }
 #allies .compagnon{
     display: flex;
     justify-content: space-between;
-}
-
-/*information en bas de personnage, nemesis, allies*/
-.personnage-info{
-    text-align: center;
-    padding: 10px;
 }
 
                                 /*design de la section justice league*/
@@ -199,6 +206,7 @@ nav ul a:hover{
     margin-top: 120px;
     margin-bottom: 30px;
     margin-left: 60px;
+    font-family: "space grotesk";
 }
 #justice-league .description-jl{
     margin-bottom: 40px;
@@ -211,6 +219,252 @@ nav ul a:hover{
     margin-top: 100px;
     width: 100%;
 }
+
+                                /*design de la section multimedia*/
 #multimedia .slider-multimedia{
     display: flex;
+    width: 60%;
+    margin: 40px auto;
+    background: linear-gradient(
+        to right, rgb(237,222,191,0.6) -99%,rgb(25,88,125,0.3)
+    ); 
+    padding: 15px;
+    font-size: 15px; 
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+}
+#multimedia .slider-multimedia img{
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: -15px;
+    margin-left: -15px;
+    margin-right: 5px;
+}
+#multimedia .slider-content{
+    padding: 12px;
+}
+#multimedia .number-coloration{
+    color: var(--yellow-color);
+}
+#multimedia .titre-debut{
+    text-transform: uppercase;
+    font-family: "space grotesk";
+    font-weight: bold;
+}
+#multimedia .slider-content .titre{
+    font-family: "space grotesk";
+    font-size:12px ;
+    font-weight: 400;
+}
+#multimedia .slider-content .sous-titre{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "space grotesk";
+    font-weight: 300;
+    font-size:18px ;
+
+}
+#multimedia .slider-content .indice{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "space grotesk";
+    font-weight: 300;
+    font-size:12px ;
+}
+#multimedia .slider-content .synopsis{
+    font-family: "space grotesk";
+    font-size:14px ;
+    padding-top: 5px;
+}
+#multimedia button{
+    position: relative;
+    top: 200px;
+    background: none;
+    border: none
+}
+#multimedia button.right-arrow{
+    right: -90%;
+}
+#multimedia .image-bande-annonce{
+    margin: 130px auto;
+}
+
+                                    /*design de la section formulaire*/
+#contact{
+    background: linear-gradient(
+        to right, rgba(237,222,191,0.6) -99%,rgba(25,88,125,0.3)
+    );
+    padding: 70px 0;
+}
+#contact .form{
+    width: 50%;
+    margin: 0 auto;
+}
+#contact h2{
+    font-family: "space grotesk";
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+#contact .titre{
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: "space grotesk";
+}
+
+#contact .form .checkbox {
+    margin-bottom: 30px;
+    background-image: var(--blue-dark);
+    border: 2px solid;
+}
+#contact .form input[type="email"], textarea{
+    display: block;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--grey-color);
+    width: 100%;
+    background-color: transparent;
+    padding: 10px auto;
+    font-family: "space grotesk";
+}
+
+#contact .news{
+    margin: 20px 0;
+    border-bottom: 2px solid var(--grey-color);
+}
+::placeholder{
+    font-size: 15px;
+    font-family: "space grotesk";
+    padding: 10px 0;
+    color: var(--grey-color);
+}
+#contact .form .btn-group{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 50px auto;
+}
+#contact .form .btn-group{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#contact .form input[type="radio"]{
+    opacity: 0;
+}
+#contact .btn-group label{
+    cursor: pointer;
+    border: 1px solid;
+    padding: 15px ;
+    border-image: linear-gradient(
+        to right, var(--grey-color), var(--blue-dark)
+    )1;
+    font-size: 22px;
+}
+#contact .form .comms{
+    line-height: 30px;
+    color: var(--grey-color);
+    font-family: "space grotesk";
+}
+#contact .form #selection{
+    display: block;
+    background: transparent;
+    width: 100%;
+    font-family: "space grotesk";
+    color: var(--grey-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid;
+    padding: 3px auto;
+    font-size: 15px;
+}
+#contact .form select{
+    appearance: none;
+    width: 100%;
+    padding-bottom: 5px;   
+}
+#contact .frequence{
+    display: block;
+}
+#contact .icon{
+    float: right;
+    margin-top: -22px;
+}
+#contact .form .icon img{
+    transform: rotate(90deg);
+    width: 15px;
+}
+#contact .form .frequence{
+    margin-bottom: 40px;
+}
+#contact .form select option{
+    background: rgb(52, 83, 104);
+}
+#contact .form .news{
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    font-size: 15px;
+    background: transparent;
+    width: 100%;
+    color: var(--grey-color);
+}
+#contact input[type="submit"]{
+    display: block;
+    margin: 60px auto;
+    width: 300px;
+    padding: 25px 0;
+    cursor: pointer;
+    background: linear-gradient(
+        to right , rgba(237,222,191,0.5) 20%, rgba(137,0,8,0.8)
+    );
+    box-shadow: var(--dark-color) 3px 3px 40px;
+    font-family: "space grotesk";
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+                                        /*section citation*/
+#citation{
+    margin: 150px;
+}
+#citation .citation-item{
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+    padding: 20px;
+}
+#citation .citation-auteur{
+    padding-top: 30px;
+    font-size: 12px;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 20px;
+    font-weight: 5;
+    color: var(--grey-color);
+}
+#citation .guillemet-close{
+    float:right;
+}
+
+                                        /*design du footer*/
+footer{
+    margin-top: 300px;
+}
+footer .text-footer{
+    text-align: center;
+    font-size: 9px;
+    font-family: "space grotesk" ;
+}
+footer .social-footer{
+    text-align: center;
+    margin: 50px;
+}
+footer .social-item{
+    padding: 10px;
 }
