@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header>       
-    <nav class="container">
-        <a href="index.html">
-            <img src="./assets/Logos/logohome.png" style="background-color: black;">
+<header id="header">       
+    <nav class="container" id="entete">
+        <a class="logo" href="index.html">
+            <img src="./assets/Logos/logohome.png">
         </a>
         <ul>
             <li><a href="index.html"> Home </a></li>
@@ -19,14 +19,25 @@
     </nav>
 </header>
 
-<main>
+<main id="main">
     <div class="container">
         <div class="scroll">
-            <img src="./assets/Logos/logo_bat_flèche.png">
-            <img class="social" src="./assets/Logos/icon_facebook.png">
-            <img class="social" src="./assets/Logos/icon_ig.png">
-            <img class="social" src="./assets/Logos/icon_tw.png">
-            <img src="./assets/Logos/logo_bat_flèche_2.png">
+            <a class="up" href="#header">
+                <img src="./assets/Logos/logo_bat_flèche.png">
+            </a>
+            <a href="#">
+                <img class="social" src="./assets/Logos/icon_facebook.png">
+            </a>
+            <a href="#">
+                <img class="social" src="./assets/Logos/icon_ig.png">
+            </a>
+            <a href="#">
+                <img class="social" src="./assets/Logos/icon_tw.png">
+            </a>
+            <a class="down" href="#contact">
+                <img src="./assets/Logos/logo_bat_flèche_2.png">
+            </a>
+            
         </div>
     </div>
 
@@ -46,10 +57,10 @@
                     <a class="btn" href="#nemesis">LES ADVERSAIRES</a>
                 </div>
             </div>
-        </div>
-        <div class="fleche">
-            <img src="./assets/Logos/flèche_down_header.png">
-        </div>
+            <div class="fleche">
+                <a href="#"> <img src="./assets/Logos/flèche_down_header.png"> </a> 
+            </div>
+        </div> 
     </section>
 
                                     <!--section batman au cinema-->
@@ -133,9 +144,14 @@
 
                                     <!--section allies-->
     <section id="allies">
+        <div class="style-position">
+            <img src="./assets/Illustrations/Bathome12.png">
+        </div>
+        
         <div class="container">
             <h2 class="titre">
                 ALLIéS
+                
             </h2>
             <p class="description">
             Alfred est le majordome des Wayne. A leur mort il s’occupe de l’éducation du jeune Bruce
@@ -199,10 +215,10 @@
             MULTIMéDIA
             </h2>
             <button class="left-arrow">
-                <img src="./assets/Logos/icon_flèche_1.png">
+                <a href="#"> <img src="./assets/Logos/icon_flèche_1.png"> </a> 
             </button>
             <button class="right-arrow">
-                <img src="./assets/Logos/icon_flèche_2.png">
+                <a href="#"> <img src="./assets/Logos/icon_flèche_2.png"> </a> 
             </button>
             <div class="slider-multimedia">
                 <img src="./assets/Illustrations/Bathome_ba1.png">
@@ -226,7 +242,7 @@
                 </div>
             </div>
             <div class="image-bande-annonce">
-                <img src="./assets/Illustrations/Bathome_ba2.png">
+                <a href="#multimedia"> <img src="./assets/Illustrations/Bathome_ba2.png"> </a>   
             </div>
         </div>
     </section>
@@ -256,8 +272,8 @@
                     <img src="./assets/Logos/icon_flèche_2.png">
                 </span>
             </div>           
-            <div>
-                <p class="news"> Souhaitez-vous recevoir des news </p>
+            <div class="news">
+                <span> Souhaitez-vous recevoir des news </span>
             </div>
             <div class="btn-group">
                 <input type="radio" id="film">
@@ -267,13 +283,13 @@
                 <input type="radio" id="tout">
                 <label for="tout"> De tout </label>
             </div>
-            <p class="titre">MESSAGE</p>
+            <span class="titre">MESSAGE</span>
             <textarea name="" id="" cols="20" rows="2" placeholder="Laissez un commentaire pour la communauté"></textarea>
             <input type="submit" value="CONFIRMER">
         </div>
     </section>
-</main>
 
+    
                                         <!-- section citation-->
     <section id="citation">
         <div class="container">
@@ -283,22 +299,34 @@
             <div class="citation-item">
                 <p class="citation-text">
                     « La seule façon raisonnable de vivre en ce bas monde, 
-                    c'est en dehors des règles. »
+                        c'est en dehors des règles. »
                 </p>
                 <p class="citation-auteur">
                     The Dark Knight : Le Chevalier Noir - 
                     Le Joker à Batman (2008)
                 </p>
-        <!-- chargement -->
+            <!-- chargement -->
+                <span class="loading">
+                                    
+                        ° ° ° °
+                    <svg width="15" height="20">
+                        <circle cx="8" cy="11" r="3.5" fill="#19587D"/>    
+                    </svg>
+                                    
+                        ° ° ° °
+                </span>    
             </div>
             <div class="guillemet-close">
                 <img src="./assets/Logos/icon_guillemets_2.png">
             </div>
+        <div class="clear-fix"> </div>
         </div>
     </section>
-<div class="clear-fix"> </div>
-<footer>
-    <div class="container">    
+                                    
+</main>
+
+<footer id="footer">
+    <div class="container">
         <div class="text-footer">
             <img src="./assets/Logos/icon_WB.png">
             <span>

@@ -11,7 +11,6 @@
     font-family: "Space Grotesk";
     src: url(../police/SpaceGrotesk-Regular.ttf);
 }
-
 /*graphic chart color*/
 :root{
     --yellow-color: #FFFF00;
@@ -24,6 +23,7 @@
     --grey-color: #C4C4C4;
     --dark-color: #000000;
     --white-color: #FFFFFF;
+    --grey-white: #BCBBBD; /*rgb(188,187,189)*/
 }
 
 /*prise en charge initial*/
@@ -42,17 +42,75 @@ button{
     font-size: 20px;
     font-weight: 400;
 }
+/*border and spacement for all page*/
 .container{
     width: 80%;
-    margin: 0 auto;
+    padding-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 4px solid rgba(188,187,189, 0.1);
+    border-bottom: none;
+    border-top: none;
+}
+header #entete{
+    border-bottom:4px solid rgb(188,187,189,0.1);
 }
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--dark-color);
+    color: var(--white-color);
     font-family: "Space Grotesk";
     font-weight: 300;
 }
-
+/*animation fade in*/
+@keyframes fadein {
+    0%{
+        opacity: 0;
+        left: -100%
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+/*firefox*/
+@-moz-keyframes fadein{
+    0%{
+        opacity: 0;
+        left: -100%
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+@-o-keyframes fadein{
+    0%{
+        opacity: 0;
+        left: -100%
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+/*safari || chrome || opera */
+@-webkit-keyframes fadein{
+    0%{
+        opacity: 0;
+        left: -100%
+    }
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+h1, h2, h3, p, .batman-item{
+    animation: fadein;
+    position: relative;
+    animation-duration: 2s;
+}
 /*Design de la navigation*/
 nav{
     display: flex;
@@ -60,6 +118,8 @@ nav{
     justify-content: space-between;
     padding: 40px;
 }
+
+/*animation logo batman*/
 ul{
     list-style: none;
 }
@@ -84,6 +144,12 @@ nav ul a:hover{
 }
 .scroll .social{
     margin-top: 10px;
+}
+
+/*animation scroll*/
+.logo:hover,.up:hover,.down :hover{
+    -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
+    filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
 }
 
                             /*design de la section intro*/
@@ -112,13 +178,20 @@ nav ul a:hover{
     text-decoration: none;
     color: var(--white-color);
     font-size: 20px;
-    padding: 20px 60px;
+    padding: 20px 40px;
     margin: 20px;
     background: linear-gradient(
         to right , rgba(237,222,191,0.3) 60%, rgba(130,0,8,0.1)
     );
     box-shadow: var(--dark-color) 3px 3px 40px;
 }
+/*animation boutton*/
+#hero .btn:hover{
+    background: linear-gradient(
+        to right , var(--gradient-white) 60%, var(--gradient-red)
+    );
+}
+
 #hero .cta{
     margin-top:40px;
 }
@@ -128,10 +201,14 @@ nav ul a:hover{
         margin: 50%;
         margin-top: 550px;
 }
+/*animation for down arrow */
+#hero .fleche:hover{
+    transform: scale(1.1);
+}
 
                                 /*design de la section batman au cinema*/
 #batman-cinema{
-    margin-top: 200px;
+    margin-top: 150px;
 }
 #batman-cinema .titre{
     text-transform: uppercase;
@@ -155,6 +232,10 @@ nav ul a:hover{
     display: flex;
     justify-content: space-between;
 }
+/*animation image de personnage, nemesis, allies*/
+.batman-item img:hover{
+    transform: scale(1.1);
+}
 
 /*information en bas de personnage, nemesis, allies*/
 .personnage-info{
@@ -165,9 +246,6 @@ nav ul a:hover{
 
 
                                 /*design de la section nemesis*/
-#nemesis{
-    margin-top: 30px;
-}
 #nemesis .titre{
     text-transform: uppercase;
     font-weight: bold;
@@ -193,6 +271,14 @@ nav ul a:hover{
     margin-top: 100px;
     margin-bottom: 30px;
     font-family: "space grotesk";
+}
+#allies .style-position{
+    margin-left: 74%;
+    margin-bottom: -15%;
+    margin-top: -4.3%;
+}
+#allies .style-position img{
+    width: 350px;
 }
 #allies .compagnon{
     display: flex;
@@ -285,8 +371,12 @@ nav ul a:hover{
 #multimedia button.right-arrow{
     right: -90%;
 }
+
 #multimedia .image-bande-annonce{
-    margin: 130px auto;
+    margin: 130px;
+    margin-left: -0.1%;
+    align-items: center;
+    padding-bottom: 20%;
 }
 
                                     /*design de la section formulaire*/
@@ -295,6 +385,7 @@ nav ul a:hover{
         to right, rgba(237,222,191,0.6) -99%,rgba(25,88,125,0.3)
     );
     padding: 70px 0;
+    margin-top: -9%;
 }
 #contact .form{
     width: 50%;
@@ -341,6 +432,7 @@ nav ul a:hover{
     padding: 10px 0;
     color: var(--grey-color);
 }
+/*boutton de choix*/
 #contact .form .btn-group{
     display: flex;
     justify-content: space-around;
@@ -370,6 +462,7 @@ nav ul a:hover{
     color: var(--grey-color);
     font-family: "space grotesk";
 }
+/*choix multiple*/
 #contact .form #selection{
     display: block;
     background: transparent;
@@ -413,6 +506,13 @@ nav ul a:hover{
     width: 100%;
     color: var(--grey-color);
 }
+
+/* animation thematique newsletter */
+#contact .form .news:hover{
+    cursor: pointer;
+}
+
+/*boutton de validation*/
 #contact input[type="submit"]{
     display: block;
     margin: 60px auto;
@@ -430,8 +530,9 @@ nav ul a:hover{
 }
 
                                         /*section citation*/
-#citation{
-    margin: 150px;
+#citation .guillemet-open{
+    margin-top: 200px;
+    margin-left: 100px;
 }
 #citation .citation-item{
     text-align: center;
@@ -448,23 +549,38 @@ nav ul a:hover{
     font-weight: 5;
     color: var(--grey-color);
 }
+#citation .loading{
+    color: #19587D;
+}
 #citation .guillemet-close{
     float:right;
+    margin-bottom: 100px;
+    margin-right: 100px;
 }
 
                                         /*design du footer*/
-footer{
-    margin-top: 300px;
+footer .content-footer{
+    padding: 8%;
 }
 footer .text-footer{
     text-align: center;
     font-size: 9px;
     font-family: "space grotesk" ;
+    margin-top: 200px;
 }
 footer .social-footer{
     text-align: center;
-    margin: 50px;
+    margin: 10px;
 }
 footer .social-item{
+    display: inline-block;
+    vertical-align: middle;
     padding: 10px;
+}
+footer img{
+    vertical-align: middle;
+    padding: 5px;
+}
+footer a{
+    text-decoration: none;
 }
