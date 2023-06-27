@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BATMAN | HOME</title>
+    <title>BATMAN || HOME</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<header id="header">       
-    <nav class="container" id="entete">
-        <a class="logo" href="index.html">
-            <img src="./assets/Logos/logohome.png">
-        </a>
-        <ul>
-            <li><a href="index.html"> Home </a></li>
-        </ul>
-    </nav>
-</header>
 
-<main id="main">
+<div id="begin-page">
+    <header id="header">       
+        <nav class="container" id="entete">
+            <a class="logo" href="index.html">
+                <img src="./assets/Logos/logohome.png">
+            </a>
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <div class="scroll">
             <a class="up" href="#header">
@@ -36,8 +36,7 @@
             </a>
             <a class="down" href="#contact">
                 <img src="./assets/Logos/logo_bat_flèche_2.png">
-            </a>
-            
+            </a> 
         </div>
     </div>
 
@@ -47,11 +46,12 @@
             <div class="content">
                 <p class="intro">
                     Au nom de ses parents assassinés, Bruce Wayne mène une guerre éternelle contre les
-                    criminels de Gotham City. Il est vengeur. Il est la nuit.
+                    criminels de Gotham City.  
+                    <br>Il est vengeur. Il est la nuit.
                 </p>
-                <h2 class="titre">
+                <h1 class="batman-title">
                     Il est batman.
-                </h2>
+                </h1>
                 <div class="cta">
                     <a class="btn" href="#batman-cinema">VOIR LE HEROS</a>
                     <a class="btn" href="#nemesis">LES ADVERSAIRES</a>
@@ -62,13 +62,15 @@
             </div>
         </div> 
     </section>
+</div>
 
                                     <!--section batman au cinema-->
+<main id="main">
     <section id="batman-cinema">
         <div class="container">
-            <h1 class="titre">
+            <h2 class="titre">
                 BATMAN AU CINEMA
-            </h1>
+            </h2>
             <p class="description">
                 Le personnage de Batman est un super héros de l'univers de DC Comics. Il a été créé par le
                 dessinateur Bob Kane et le scénariste Bill Finger et apparaît pour la première fois dans le
@@ -190,7 +192,7 @@
                                         <!-- section justice league-->
     <section id="justice-league">
         <div class="container">
-            <div>
+            <div class="content-jl">
                 <h2 class="titre">
                     JUSTICE LEAUGE
                 </h2>
@@ -211,7 +213,7 @@
                                     <!-- section multimedia-->
     <section id="multimedia">
         <div class="container">
-            <h2 class="titre-debut">
+            <h2 class="titre">
             MULTIMéDIA
             </h2>
             <button class="left-arrow">
@@ -221,11 +223,13 @@
                 <a href="#"> <img src="./assets/Logos/icon_flèche_2.png"> </a> 
             </button>
             <div class="slider-multimedia">
-                <img src="./assets/Illustrations/Bathome_ba1.png">
+                <div class="slider-image">
+                    <img src="./assets/Illustrations/Bathome_ba1.png">
+                </div>
                 <div class="slider-content">
-                    <h2 class="titre">
+                    <h3 class="titre">
                         ACTION, ADVENTURE
-                    </h2>
+                    </h3>
                     <h3 class="sous-titre">
                         Batman Begins
                     </h3>
@@ -257,8 +261,10 @@
             <input type="email" name="email" placeholder="Adresse email">
             <label class="titre" for="newsletter"> NEWSLETTER </label>
             <label class="comms" for="other-information">En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de
-                Batman :</label>    
-            <input class="checkbox" type="checkbox">
+                Batman :</label>
+            <div class="checkbox">    
+                <input type="checkbox">
+            </div>
             <div class="frequence">
                 <select name="drop-down-list" id="selection">
                     <option value="0" disabled selected> Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter </option>

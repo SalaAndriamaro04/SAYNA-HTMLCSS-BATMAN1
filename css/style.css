@@ -139,7 +139,7 @@ nav ul a:hover{
     flex-direction: column;
     align-items: center;
     position: fixed;
-    right: 80px;
+    right: 84px;
     top: 240px;
 }
 .scroll .social{
@@ -147,13 +147,13 @@ nav ul a:hover{
 }
 
 /*animation scroll*/
-.logo:hover,.up:hover,.down :hover{
+.logo:hover,.up:hover,.down :hover, .container .scroll a:hover{
     -webkit-filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
     filter: invert(4%)sepia(100%)saturate(1680%)hue-rotate(352deg)brightness(109%)contrast(104%);
 }
 
                             /*design de la section intro*/
-#hero{
+#begin-page{
     background-image: url(../assets/Illustrations/Bathome1.png);
     height: 800px;
     background-position: top center;
@@ -167,28 +167,37 @@ nav ul a:hover{
     justify-content: center;
     text-align: center;
     width: 60%;
-    margin: 0 auto;
+    height: 20%;
+    margin: -10% auto;
     padding-top: 150px;
-
 }
-#hero .titre{
-    margin: 20px 0;
+#hero .content .intro{
+    margin: 1.5vw;
+    line-height: 1.7vw;
 }
-#hero .btn{
+#hero .batman-title{
+    font-family: "space grotesk";
+    font-size: 22px;
+    font-weight: bold;
+}
+#hero .content .cta{
+    margin-top: 10%;
+}
+#hero .content .cta .btn{
     text-decoration: none;
     color: var(--white-color);
     font-size: 20px;
     padding: 20px 40px;
     margin: 20px;
     background: linear-gradient(
-        to right , rgba(237,222,191,0.3) 60%, rgba(130,0,8,0.1)
+        to right , rgba(237,222,191,0.3) 40%, rgba(130, 0, 9, 0.466)
     );
     box-shadow: var(--dark-color) 3px 3px 40px;
 }
 /*animation boutton*/
-#hero .btn:hover{
+#hero .content .btn:hover{
     background: linear-gradient(
-        to right , var(--gradient-white) 60%, var(--gradient-red)
+        to right , var(--gradient-white) 40%, var(--gradient-red)
     );
 }
 
@@ -199,21 +208,17 @@ nav ul a:hover{
         background-color: #000000;
         display: block;
         margin: 50%;
-        margin-top: 550px;
-}
-/*animation for down arrow */
-#hero .fleche:hover{
-    transform: scale(1.1);
+        margin-top: 37.4vw;
 }
 
                                 /*design de la section batman au cinema*/
 #batman-cinema{
     margin-top: 150px;
 }
-#batman-cinema .titre{
+.titre{
     text-transform: uppercase;
     font-weight: bold;
-    margin: 30px 0;
+    margin: 20px 0;
     font-family: "rajdhani";
     font-size: 36px;
 }
@@ -222,7 +227,7 @@ nav ul a:hover{
 .description{
     margin-bottom: 100px;
     text-align: justify;
-    width: 80%;
+    width: 90%;
     font-size: 18px;
     font-family: "space grotesk";
 }
@@ -232,9 +237,11 @@ nav ul a:hover{
     display: flex;
     justify-content: space-between;
 }
+
 /*animation image de personnage, nemesis, allies*/
-.batman-item img:hover{
+.batman-item:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 /*information en bas de personnage, nemesis, allies*/
@@ -275,7 +282,7 @@ nav ul a:hover{
 #allies .style-position{
     margin-left: 74%;
     margin-bottom: -15%;
-    margin-top: -4.3%;
+    margin-top: -6%;
 }
 #allies .style-position img{
     width: 350px;
@@ -286,7 +293,12 @@ nav ul a:hover{
 }
 
                                 /*design de la section justice league*/
-#justice-league .titre{
+#justice-league .container .content-jl{
+    margin-bottom: 2vw;
+    margin-top: -4vw;
+    padding-bottom: 3vw;
+}
+#justice-league .container .titre{
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 120px;
@@ -294,7 +306,7 @@ nav ul a:hover{
     margin-left: 60px;
     font-family: "space grotesk";
 }
-#justice-league .description-jl{
+#justice-league .container .description-jl{
     margin-bottom: 40px;
     text-align: justify;
     width: 90%;
@@ -302,51 +314,44 @@ nav ul a:hover{
     margin: 0 auto;
 }
 #justice-league .image-jl img{
-    margin-top: 100px;
     width: 100%;
 }
 
                                 /*design de la section multimedia*/
 #multimedia .slider-multimedia{
     display: flex;
-    width: 60%;
-    margin: 40px auto;
+    width: 70%;
+    margin: 2vw auto;
     background: linear-gradient(
         to right, rgb(237,222,191,0.6) -99%,rgb(25,88,125,0.3)
     ); 
-    padding: 15px;
     font-size: 15px; 
     border-top-right-radius:20px ;
     border-bottom-right-radius:20px ;
 }
+#multimedia .slider-multimedia .slider-image{
+    width:90vw;
+}
 #multimedia .slider-multimedia img{
     width: 100%;
-    margin-top: -15px;
-    margin-bottom: -15px;
-    margin-left: -15px;
-    margin-right: 5px;
+    height: 100%;
 }
 #multimedia .slider-content{
-    padding: 12px;
+    padding: 15px;
+    
 }
 #multimedia .number-coloration{
     color: var(--yellow-color);
 }
-#multimedia .titre-debut{
-    text-transform: uppercase;
-    font-family: "space grotesk";
-    font-weight: bold;
-}
 #multimedia .slider-content .titre{
     font-family: "space grotesk";
     font-size:12px ;
-    font-weight: 400;
+    font-weight: 300;
 }
 #multimedia .slider-content .sous-titre{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: -1vw;
     font-family: "space grotesk";
-    font-weight: 300;
+    font-weight: normal;
     font-size:18px ;
 
 }
@@ -355,12 +360,12 @@ nav ul a:hover{
     padding-bottom: 5px;
     font-family: "space grotesk";
     font-weight: 300;
-    font-size:12px ;
+    font-size:12px;
 }
 #multimedia .slider-content .synopsis{
     font-family: "space grotesk";
     font-size:14px ;
-    padding-top: 5px;
+    padding-top: 1vw;
 }
 #multimedia button{
     position: relative;
@@ -373,10 +378,12 @@ nav ul a:hover{
 }
 
 #multimedia .image-bande-annonce{
-    margin: 130px;
-    margin-left: -0.1%;
-    align-items: center;
+    margin-top: 180px;
+    margin-bottom: 120px;
     padding-bottom: 20%;
+}
+#multimedia .image-bande-annonce a img{
+    width:100%;
 }
 
                                     /*design de la section formulaire*/
@@ -406,10 +413,19 @@ nav ul a:hover{
 }
 
 #contact .form .checkbox {
-    margin-bottom: 30px;
-    background-image: var(--blue-dark);
-    border: 2px solid;
+    display: inline;
+    position: absolute;
+    margin-left: 0.5vw;
+    margin-top: 0.5vw;
+    border: 0.1vw solid var(--blue-dark);
+    padding-right: 1vw;
+    padding-top: 0.9vw;
 }
+#contact .form .checkbox input{
+    position:absolute;
+    margin-top: -0.9vw ;
+}
+
 #contact .form input[type="email"], textarea{
     display: block;
     border-top: none;
@@ -494,6 +510,10 @@ nav ul a:hover{
 }
 #contact .form .frequence{
     margin-bottom: 40px;
+    cursor: pointer;
+}
+#contact .form select{
+    cursor: pointer;
 }
 #contact .form select option{
     background: rgb(52, 83, 104);
@@ -531,7 +551,7 @@ nav ul a:hover{
 
                                         /*section citation*/
 #citation .guillemet-open{
-    margin-top: 200px;
+    margin-top: 100px;
     margin-left: 100px;
 }
 #citation .citation-item{
